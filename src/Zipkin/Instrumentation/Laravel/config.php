@@ -7,10 +7,13 @@
  */
 return [
     // service name
-    'name'       => env('ZIPKIN_APP_NAME', 'laravel-app'),
+    'name'    => env('ZIPKIN_APP_NAME', 'laravel-app'),
 
     // transport driver
-    'default'    => env('ZIPKIN_TRANSPORT', 'http'),
+    'default' => env('ZIPKIN_TRANSPORT', 'http'),
+
+    // queue name
+    'queue'      => env('ZIPKIN_QUEUE', 'default'),
 
     // transports
     'transports' => [

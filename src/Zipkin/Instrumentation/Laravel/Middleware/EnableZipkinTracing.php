@@ -141,7 +141,7 @@ class EnableZipkinTracing
 
         // 推入队列
         dispatch(
-            new PushToZipkin(
+            (new PushToZipkin(
                 $endpoint,
                 $sampled,
                 $debug,
@@ -158,7 +158,7 @@ class EnableZipkinTracing
                         ]
                     )
                 ]
-            )
+            ))->onQueue(config('zipkin.queue', 'default'))
         );
     }
 }
