@@ -118,7 +118,7 @@ class EnableZipkinTracing
      * @param Response $response
      * @author         JohnWang <takato@vip.qq.com>
      */
-    public function terminate(Request $request, Response $response)
+    public function terminate($request, $response)
     {
         if (!$this->requestAnnotations) {
             return;
