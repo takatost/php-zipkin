@@ -101,8 +101,7 @@ class EnableZipkinTracing
             'annotations'       => [Annotation::generateServerRecv()],
             'binaryAnnotations' => [
                 BinaryAnnotation::generateString('server.env', $this->container->environment()),
-                BinaryAnnotation::generateString('server.request.uri', $uri),
-                BinaryAnnotation::generateString('server.request.query', json_encode($request->query->all())),
+                BinaryAnnotation::generateString('server.request.uri', $uri)
             ]
         ];
 
